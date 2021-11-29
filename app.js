@@ -39,7 +39,7 @@ var createNewTaskElement=function(taskString){
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    editInput.className="task";
+    editInput.className="task hidden";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="ui-btn edit";
@@ -92,12 +92,16 @@ var editTask=function(){
     if(containsClass){
 
         //switch to .edit-mode
-        editInput.classList.remove("editing")
+        editInput.classList.remove("editing");
+        editInput.classList.add("hidden");
+        label.classList.remove("hidden");
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
     }else{
-        editInput.classList.add("editing")
+        editInput.classList.add("editing");
+        editInput.classList.remove("hidden");
+        label.classList.add("hidden");
         editInput.value=label.innerText;
         editBtn.innerText="Save";
     }
