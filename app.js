@@ -38,6 +38,7 @@ var createNewTaskElement=function(taskString){
     label.id="task-caption";
 
     //Each elements, needs appending
+    checkBox.className="task-checkbox";
     checkBox.type="checkbox";
     editInput.type="text";
     editInput.className="task hidden";
@@ -164,7 +165,7 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector("input[type=checkbox]");
+    var checkBox=taskListItem.querySelector(".task-checkbox");
     var editButton=taskListItem.querySelector(".ui-btn.edit");
     var deleteButton=taskListItem.querySelector(".ui-btn.delete");
 

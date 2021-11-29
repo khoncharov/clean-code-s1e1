@@ -115,11 +115,7 @@ button {
     align-items: center;
 }
 
-.task-row-wrapper > * {
-    vertical-align: middle;
-}
-
-.task-row-wrapper > input[type="checkbox"] {
+.task-checkbox {
     margin: 0 10px;
 }
 
@@ -127,10 +123,6 @@ button {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
-    width: 226px;
-}
-
-.task-row-wrapper > input[type="text"] {
     width: 226px;
 }
 
@@ -153,7 +145,7 @@ button {
 
 /* Edit Task */
 
-ul li.edit-mode input[type=text] {
+.edit-mode .editing {
     display: inline-block;
     width: 224px;
 }
