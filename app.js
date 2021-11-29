@@ -92,10 +92,12 @@ var editTask=function(){
     if(containsClass){
 
         //switch to .edit-mode
+        editInput.classList.remove("editing")
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
     }else{
+        editInput.classList.add("editing")
         editInput.value=label.innerText;
         editBtn.innerText="Save";
     }
